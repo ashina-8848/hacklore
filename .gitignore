@@ -26,4 +26,4 @@
 coverage/
 
 # OS files
-Thumbs.db
+Thumbs.db/node_modules/
