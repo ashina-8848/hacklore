@@ -12,6 +12,7 @@
   - Ashina Suresh — College of Engineering Vadakara
 
 - **Hosted Demo:** https://hacklore-five.vercel.app/
+- **Demo Video:** https://drive.google.com/file/d/1_wDzsXwy61K6A9XmBmjcc_EHrstxX6_p/view?usp=drive_link
 
 ---
 
