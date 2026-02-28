@@ -2,419 +2,192 @@
   <img src="./img.png" alt="Project Banner" width="100%">
 </p>
 
-# [] 🎯
+# Support Hub — Emotion‑Aware Chatbot 🎯
 
 ## Basic Details
 
-### Team Name: [hacklore]
+- **Team Name:** hacklore  
+- **Team Members:**
+  - Fathima vt — College of Engineering Vadakara
+  - Ashina Suresh — College of Engineering Vadakara
 
-### Team Members
-- Member 1: [fathima vt] - [College of engineering vadakara]
-- Member 2: [asina suresh] - [College of engineering vadakara]
-
-### Hosted Project Link
-[mention your project hosted link here]
-
-### Project Description
-[this project is a web based emotion-aware chatbot that detects the  users feelings from twxt and gives suitable responses]
-
-### The Problem statement
-[we are solving the problem of chatbots giving the same or wrong reply for every emotion]
-
-### The Solution
-[this project makes the chatbot understand the userfeeling from text and give an appropiate emotion based response]
+- **Hosted Demo:** https://hacklore-five.vercel.app/
 
 ---
 
-## Technical Details
+## Project Summary
 
-### Technologies/Components Used
+**Problem statement**  
+Many chatbots return repetitive, generic, or off‑target replies that fail to reflect the user's emotional state. That can be frustrating or even harmful when users need empathy or urgent support.
 
-**For Software:**
-- Languages used: [e.g., JavaScript, Python, Java]
-- Frameworks used: [e.g., React, Django, Spring Boot]
-- Libraries used: [e.g., axios, pandas, JUnit]
-- Tools used: [e.g., VS Code, Git, Docker]
+**Solution**  
+Support Hub is a lightweight, web‑based chatbot that analyzes the full user message (including negations and sentence meaning), detects emotion and intensity, tracks emotion changes across the conversation, and generates contextually appropriate, human‑sounding replies. It uses an internal father‑figure persona for tone and can optionally call Google Gemini for richer responses.
 
-**For Hardware:**
-- Main components: [List main components]
-- Specifications: [Technical specifications]
-- Tools required: [List tools needed]
+**AI used during development:** GitHub Copilot (Copilot agent) assisted with code scaffolding and iteration. Optional runtime AI: Google Gemini (Generative Language API) — enabled only if you provide an API key.
 
 ---
 
-## Features
+## Key Features
 
-List the key features of your project:
-- Feature 1: [Description]
-- Feature 2: [Description]
-- Feature 3: [Description]
-- Feature 4: [Description]
+- Negation‑aware emotion detection (handles "not", "don't", etc.)
+- Emotion categories: sad, happy, anxious, angry, stressed, lonely, confused, neutral
+- Intensity scoring: mild / moderate / deep / critical with crisis escalation
+- Conversation context tracking and emotion change acknowledgment
+- Caring father‑figure persona: short, warm, protective replies (3–6 sentences)
+- Greeting handling and "I'm fine" gentle probing
+- Mood quick‑selector, emoji history, and responsive UI
+- Offline fallback responses when the Gemini API is not available
 
 ---
 
-## Implementation
+## Tech Stack & Files
 
-### For Software:
+- Languages: HTML, CSS, JavaScript (vanilla)
+- Optional backend: Node.js / Express (for server proxy to Gemini)
+- Hosting: Vercel (static or with serverless functions)
 
-#### Installation
+Important files:
+- `index.html` — Main UI
+- `index-local.html` — Offline variant (no external API)
+- `style.css` — Styling
+- `script.js` — Core logic (emotion detection, response generation, UI)
+- `server.js` — Example backend proxy (optional)
+- `README.md` — Documentation (this file)
+
+---
+
+## Installation & Run (Static)
+
+No build step required for the static site.
+
+1. Clone the repo:
 ```bash
-[Installation commands - e.g., npm install, pip install -r requirements.txt]
+git clone <your-repo-url>
+cd "my website"
 ```
 
-#### Run
+2. Open the app:
+- Double‑click `index.html` or open `index-local.html` in a modern browser.
+- Or serve locally (optional):
 ```bash
-[Run commands - e.g., npm start, python app.py]
+python -m http.server 8000
+# then open http://localhost:8000
 ```
-
-### For Hardware:
-
-#### Components Required
-[List all components needed with specifications]
-
-#### Circuit Setup
-[Explain how to set up the circuit]
 
 ---
 
-## Project Documentation
+## Optional: Run With Node.js Backend (for Gemini proxy)
 
-### For Software:
+Use a backend if you want to hide your Gemini API key and avoid exposing it to the browser.
 
-#### Screenshots (Add at least 3)
-
-![Screenshot1](Add screenshot 1 here with proper name)
-*Add caption explaining what this shows*
-
-![Screenshot2](Add screenshot 2 here with proper name)
-*Add caption explaining what this shows*
-
-![Screenshot3](Add screenshot 3 here with proper name)
-*Add caption explaining what this shows*
-
-#### Diagrams
-
-**System Architecture:**
-
-![Architecture Diagram](docs/architecture.png)
-*Explain your system architecture - components, data flow, tech stack interaction*
-
-**Application Workflow:**
-
-![Workflow](docs/workflow.png)
-*Add caption explaining your workflow*
-
----
-
-### For Hardware:
-
-#### Schematic & Circuit
-
-![Circuit](Add your circuit diagram here)
-*Add caption explaining connections*
-
-![Schematic](Add your schematic diagram here)
-*Add caption explaining the schematic*
-
-#### Build Photos
-
-![Team](Add photo of your team here)
-
-![Components](Add photo of your components here)
-*List out all components shown*
-
-![Build](Add photos of build process here)
-*Explain the build steps*
-
-![Final](Add photo of final product here)
-*Explain the final build*
-
----
-
-## Additional Documentation
-
-### For Web Projects with Backend:
-
-#### API Documentation
-
-**Base URL:** `https://api.yourproject.com`
-
-##### Endpoints
-
-**GET /api/endpoint**
-- **Description:** [What it does]
-- **Parameters:**
-  - `param1` (string): [Description]
-  - `param2` (integer): [Description]
-- **Response:**
-```json
-{
-  "status": "success",
-  "data": {}
-}
-```
-
-**POST /api/endpoint**
-- **Description:** [What it does]
-- **Request Body:**
-```json
-{
-  "field1": "value1",
-  "field2": "value2"
-}
-```
-- **Response:**
-```json
-{
-  "status": "success",
-  "message": "Operation completed"
-}
-```
-
-[Add more endpoints as needed...]
-
----
-
-### For Mobile Apps:
-
-#### App Flow Diagram
-
-![App Flow](docs/app-flow.png)
-*Explain the user flow through your application*
-
-#### Installation Guide
-
-**For Android (APK):**
-1. Download the APK from [Release Link]
-2. Enable "Install from Unknown Sources" in your device settings:
-   - Go to Settings > Security
-   - Enable "Unknown Sources"
-3. Open the downloaded APK file
-4. Follow the installation prompts
-5. Open the app and enjoy!
-
-**For iOS (IPA) - TestFlight:**
-1. Download TestFlight from the App Store
-2. Open this TestFlight link: [Your TestFlight Link]
-3. Click "Install" or "Accept"
-4. Wait for the app to install
-5. Open the app from your home screen
-
-**Building from Source:**
+1. Install dependencies:
 ```bash
-# For Android
-flutter build apk
+npm install
+```
+
+2. Create a `.env` file in the project root:
+```
+GEMINI_API_KEY=your_gemini_api_key_here
+```
+
+3. Start the server:
+```bash
+node server.js
 # or
-./gradlew assembleDebug
+npx nodemon server.js
+```
 
-# For iOS
-flutter build ios
-# or
-xcodebuild -workspace App.xcworkspace -scheme App -configuration Debug
+4. Open `http://localhost:3000` (or the port configured in `server.js`).
+
+---
+
+## Gemini Integration (Optional)
+
+- The client optionally sends prompts to Google Gemini (Generative Language API).
+- Best practice: call Gemini from a backend server (e.g., `server.js`) to keep the API key secret.
+- If you test locally and temporarily embed the key in `script.js`, **do not commit** it to version control.
+- Example backend approach:
+  - Client POSTs `/api/generate` with message and detected emotion.
+  - Server reads `GEMINI_API_KEY` from `.env`, calls Gemini, and returns the generated text.
+
+---
+
+## Deployment (Vercel)
+
+For the static frontend choose the "Other / Static Site (No Framework)" preset in Vercel:
+
+- Framework Preset: Other (Static Site / No Framework)
+- Build Command: (leave empty)
+- Output Directory: (root or leave empty)
+
+If you add serverless functions for a backend proxy, configure those in Vercel and use a Node preset.
+
+---
+
+## Usage & Examples
+
+- Greeting:
+  - Input: "hi"
+  - Bot: Short, warm father‑figure greeting (not therapy).
+- Mild sadness:
+  - Input: "I'm feeling a bit down today"
+  - Bot: Acknowledge → Validate → Small action → Encouragement
+- Crisis:
+  - Input: "I want to end my life"
+  - Bot: Immediate crisis protocol, grounding, and urging to contact emergency services (e.g., 988 for US).
+
+Bot output format in UI:
+```
+Detected emotion: <emotion>
+Response: <reply text>
 ```
 
 ---
 
-### For Hardware Projects:
+## Testing & Validation
 
-#### Bill of Materials (BOM)
+Try these example inputs and verify outputs:
 
-| Component | Quantity | Specifications | Price | Link/Source |
-|-----------|----------|----------------|-------|-------------|
-| Arduino Uno | 1 | ATmega328P, 16MHz | ₹450 | [Link] |
-| LED | 5 | Red, 5mm, 20mA | ₹5 each | [Link] |
-| Resistor | 5 | 220Ω, 1/4W | ₹1 each | [Link] |
-| Breadboard | 1 | 830 points | ₹100 | [Link] |
-| Jumper Wires | 20 | Male-to-Male | ₹50 | [Link] |
-| [Add more...] | | | | |
-
-**Total Estimated Cost:** ₹[Amount]
-
-#### Assembly Instructions
-
-**Step 1: Prepare Components**
-1. Gather all components listed in the BOM
-2. Check component specifications
-3. Prepare your workspace
-![Step 1](images/assembly-step1.jpg)
-*Caption: All components laid out*
-
-**Step 2: Build the Power Supply**
-1. Connect the power rails on the breadboard
-2. Connect Arduino 5V to breadboard positive rail
-3. Connect Arduino GND to breadboard negative rail
-![Step 2](images/assembly-step2.jpg)
-*Caption: Power connections completed*
-
-**Step 3: Add Components**
-1. Place LEDs on breadboard
-2. Connect resistors in series with LEDs
-3. Connect LED cathodes to GND
-4. Connect LED anodes to Arduino digital pins (2-6)
-![Step 3](images/assembly-step3.jpg)
-*Caption: LED circuit assembled*
-
-**Step 4: [Continue for all steps...]**
-
-**Final Assembly:**
-![Final Build](images/final-build.jpg)
-*Caption: Completed project ready for testing*
+- "hi" → brief dad greeting
+- "I'm not okay" → negative detection → supportive probe
+- "I can't breathe, panic attack" → anxious, grounding instruction
+- "I want to die" → crisis escalation and resources
 
 ---
 
-### For Scripts/CLI Tools:
+## Security & Privacy
 
-#### Command Reference
-
-**Basic Usage:**
-```bash
-python script.py [options] [arguments]
-```
-
-**Available Commands:**
-- `command1 [args]` - Description of what command1 does
-- `command2 [args]` - Description of what command2 does
-- `command3 [args]` - Description of what command3 does
-
-**Options:**
-- `-h, --help` - Show help message and exit
-- `-v, --verbose` - Enable verbose output
-- `-o, --output FILE` - Specify output file path
-- `-c, --config FILE` - Specify configuration file
-- `--version` - Show version information
-
-**Examples:**
-
-```bash
-# Example 1: Basic usage
-python script.py input.txt
-
-# Example 2: With verbose output
-python script.py -v input.txt
-
-# Example 3: Specify output file
-python script.py -o output.txt input.txt
-
-# Example 4: Using configuration
-python script.py -c config.json --verbose input.txt
-```
-
-#### Demo Output
-
-**Example 1: Basic Processing**
-
-**Input:**
-```
-This is a sample input file
-with multiple lines of text
-for demonstration purposes
-```
-
-**Command:**
-```bash
-python script.py sample.txt
-```
-
-**Output:**
-```
-Processing: sample.txt
-Lines processed: 3
-Characters counted: 86
-Status: Success
-Output saved to: output.txt
-```
-
-**Example 2: Advanced Usage**
-
-**Input:**
-```json
-{
-  "name": "test",
-  "value": 123
-}
-```
-
-**Command:**
-```bash
-python script.py -v --format json data.json
-```
-
-**Output:**
-```
-[VERBOSE] Loading configuration...
-[VERBOSE] Parsing JSON input...
-[VERBOSE] Processing data...
-{
-  "status": "success",
-  "processed": true,
-  "result": {
-    "name": "test",
-    "value": 123,
-    "timestamp": "2024-02-07T10:30:00"
-  }
-}
-[VERBOSE] Operation completed in 0.23s
-```
+- Never commit API keys—add `.env` to `.gitignore`.
+- Prefer a backend proxy for any external AI calls to avoid exposing keys.
+- Local detection runs client‑side in `script.js` by default; with Gemini enabled, user text is sent to the API — ensure you disclose this in privacy docs if collecting logs.
 
 ---
 
-## Project Demo
+## Contribution & Team Work
 
-### Video
-[Add your demo video link here - YouTube, Google Drive, etc.]
+If you'd like to contribute:
 
-*Explain what the video demonstrates - key features, user flow, technical highlights*
+1. Fork the repo
+2. Create a feature branch
+3. Commit and open a pull request with a clear description
 
-### Additional Demos
-[Add any extra demo materials/links - Live site, APK download, online demo, etc.]
-
----
-
-## AI Tools Used (Optional - For Transparency Bonus)
-
-If you used AI tools during development, document them here for transparency:
-
-**Tool Used:** [e.g., GitHub Copilot, v0.dev, Cursor, ChatGPT, Claude]
-
-**Purpose:** [What you used it for]
-- Example: "Generated boilerplate React components"
-- Example: "Debugging assistance for async functions"
-- Example: "Code review and optimization suggestions"
-
-**Key Prompts Used:**
-- "Create a REST API endpoint for user authentication"
-- "Debug this async function that's causing race conditions"
-- "Optimize this database query for better performance"
-
-**Percentage of AI-generated code:** [Approximately X%]
-
-**Human Contributions:**
-- Architecture design and planning
-- Custom business logic implementation
-- Integration and testing
-- UI/UX design decisions
-
-*Note: Proper documentation of AI usage demonstrates transparency and earns bonus points in evaluation!*
-
----
-
-## Team Contributions
-
-- [Name 1]: [Specific contributions - e.g., Frontend development, API integration, etc.]
-- [Name 2]: [Specific contributions - e.g., Backend development, Database design, etc.]
-- [Name 3]: [Specific contributions - e.g., UI/UX design, Testing, Documentation, etc.]
+Team roles:
+- **Fathima vt:** Frontend, emotion detection, UI/UX, documentation  
+- **Ashina Suresh:** Backend/API integration, response generation, deployment
 
 ---
 
 ## License
 
-This project is licensed under the [LICENSE_NAME] License - see the [LICENSE](LICENSE) file for details.
-
-**Common License Options:**
-- MIT License (Permissive, widely used)
-- Apache 2.0 (Permissive with patent grant)
-- GPL v3 (Copyleft, requires derivative works to be open source)
+We suggest the MIT License. Add `LICENSE` with MIT text if you choose.
 
 ---
 
-Made with ❤️ at TinkerHub
+## Acknowledgements
+
+- GitHub Copilot (Copilot agent) helped during development for scaffolding and code suggestions.
+- Google Gemini (optional runtime model) for advanced generation if API key is provided.
+
+---
+
+Made with ❤️ by **hacklore**
