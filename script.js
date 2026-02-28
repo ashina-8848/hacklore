@@ -149,7 +149,7 @@ function detectEmotion(text) {
 
   // Helper to check if word at index i is negated by a negation within 3 tokens before it
   function isNegated(i) {
-    for (let j = Math.max(0, i-3); j < i; j++) {
+    for (let j = Math.max(0, i-3); addj < i; j++) {
       if (negations.includes(tokens[j].replace(/[^a-z0-9']/g, ''))) return true;
     }
     return false;

@@ -1,0 +1,29 @@
+# dependencies
+/node_modules/
+/npm-debug.log
+/yarn-error.log
+/package-lock.json
+/yarn.lock
+
+# dotenv environment variables
+.env
+
+# build outputs
+/dist/
+/build/
+/out/
+
+# VS Code settings
+.vscode/
+
+# macOS
+.DS_Store
+
+# logs
+*.log
+
+# coverage
+coverage/
+
+# OS files
+Thumbs.db
