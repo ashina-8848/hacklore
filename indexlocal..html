@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Support Hub - Emotional Wellness Companion</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="main-wrapper">
+  <div class="sidebar">
+    <div class="sidebar-header">
+      <h1>🧡 Support Hub</h1>
+      <p>Your Emotional Wellness Companion</p>
+    </div>
+
+    <div class="mood-selector">
+      <h3>How are you feeling?</h3>
+      <div class="mood-buttons">
+        <button class="mood-btn" onclick="setQuickMood('😊', 'happy')" title="Happy">😊</button>
+        <button class="mood-btn" onclick="setQuickMood('😰', 'anxious')" title="Anxious">😰</button>
+        <button class="mood-btn" onclick="setQuickMood('😢', 'sad')" title="Sad">😢</button>
+        <button class="mood-btn" onclick="setQuickMood('😠', 'angry')" title="Angry">😠</button>
+        <button class="mood-btn" onclick="setQuickMood('😫', 'stressed')" title="Stressed">😫</button>
+        <button class="mood-btn" onclick="setQuickMood('🤔', 'confused')" title="Confused">🤔</button>
+      </div>
+      <button class="select-mood-btn" onclick="alert('Select a mood above to start the conversation!')">❓ Select your mood</button>
+    </div>
+
+    <div class="mood-history">
+      <h3>📊 Mood History</h3>
+      <div class="emoji-history" id="emoji-history"></div>
+      <div class="no-history" id="no-history-msg">No mood history yet</div>
+      <button class="clear-history-btn" onclick="clearHistory()">🗑️ Clear History</button>
+    </div>
+
+    <div class="quick-tips">
+      <h3>✨ Quick Tips</h3>
+      <ul>
+        <li>💭 <strong>Be honest</strong> about your feelings</li>
+        <li>🌱 <strong>Small steps</strong> lead to big changes</li>
+        <li>🤝 <strong>You're never alone</strong> in this</li>
+        <li>💜 <strong>Self-care</strong> is not selfish</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="chat-container">
+    <div class="chat-header">
+      <h2>💬 Conversation</h2>
+      <span class="trash-icon" onclick="clearChat()" title="Clear conversation">🗑️</span>
+    </div>
+    <div id="chat-box">
+      <div class="message bot">
+        <div class="message-content">
+          👋 Hi — I'm here. How are you feeling?
+        </div>
+      </div>
+    </div>
+    <div class="input-area">
+      <input type="text" id="user-input" placeholder="Share your thoughts... I'm listening 💙" onkeypress="if(event.key==='Enter')sendMessage()" />
+      <button class="send-btn" onclick="sendMessage()">➤</button>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
